@@ -1,0 +1,487 @@
+<!doctype html>
+<html amp lang="en">
+    <head>
+        <meta charset="utf-8">
+        <script async src="https://cdn.ampproject.org/v0.js"></script>
+        <title>Hello, AMPs</title>
+        <link rel="canonical" href="index.html">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/my_styles.css">
+        <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+        
+        <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+        <script type="application/ld+json">
+        {
+            "@context": "http://schema.org",
+            "@type": "NewsArticle",
+            "headline": "Open-source framework for publishing content",
+            "datePublished": "2015-10-07T12:02:41Z",
+            "image": [
+            "logo.jpg"
+            ]
+        }
+        </script>
+        <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                        <h1>Ensayo de Media Query y AMP</h1>
+                </div>
+            </div>
+            <div class="row">
+                <nav class="nav flex-column navbar navbar-light">
+                    <a class="nav-link" href="#Introduccion" title="Introduccion">Introducción</a>
+                    <a class="nav-link active" href="#¿Qué es Media Query?" title="¿Qué es Media Query?">¿Qué es Media Query?</a>
+                    <a class="nav-link" href="#Navegadores y Media Query" title="Navegadores y Media Query">Navegadores y Media Query</a>
+                    <a class="nav-link" href="#Fucnionalidad de Media Query" title="Fucnionalidad de Media Query">Fucnionalidad de Media Query</a>
+                    <a class="nav-link" href="#Semantica web" title="Semantica web">Semantica web</a>
+                    <a class="nav-link" href="#Colores web" title="Colores web">Colores web</a>
+                    <a class="nav-link" href="#REM y EMM" title="REM y EM">REM y EM</a>
+                    <a class="nav-link" href="#AMP" title="AMP">AMP</a>
+                    <a class="nav-link" href="#Referencias" title="Referencias">Referencias</a>
+                </nav>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2 id="Introduccion">Introducción</h2>
+                    <p>El propósito del ensayo consiste en conocer la funcionalidad de Media Query en el desarrollo de páginas web, el compartamiento en los diferentes tipos de navegadores. Asi mismo daremos un vistazo a la semantica web, el uso de los colores en sus diferentes código (hexadecial, rgb y hsl) y algunas unidades de medida comos son EM y REM.</p>
+                    <p>Otro elemento importante es conocer AMP su estructura y su funcionamiento para sitios webs. </p>
+                </div>
+                
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2 id="¿Qué es Media Query?">¿Qué es Media Query?</h2>
+                    <p>Media Query es un modulos de las hojas de estilo(CSS) utilizada en las páginas web para darles las características deseadas como son el color de fondo, imagen de fondo, tipo de fuente para los encabezados, párafos entre otros. Pero en especial los media querys proporciona el tamaño ideal para que no pierda su estructura y su estilo los páginas web en su consulta utilizando diferentes dispositivos, es decir, podemos consultar una misma página web en una computadora de escritorio "PC", en una computadora portatil "LAPTOP" o en dispositivos inteligentes como pueden ser una "TABLET" o un "SMARTPHONE". Cada uno de estos dispositivos tiene un tamaño de pantalla y resolución, lo cual si no utilizsmos los media query no se adaptaria el contenido a cada uno de ellos y no se visualizaria de forma correcta.</p>
+                    <div class="row">    
+                        <div class="col-sm-8">
+                                <amp-img src="images/img_media_query.jpg" width="250" height="150" layout="responsive" alt="media query"></amp-img>
+                        </div>
+                        <div class="col-sm-4">
+                            <p>Este es une ejemplo básico de la sintaxis de media query.</p>
+                            <blockquote class="blockquote text-center" style="background-color: #5df0f0">
+                                <p>
+                                    @media not|only <em>mediatype</em> and (<em>media feature and|or|not mediafeature</em>) {
+                                    <br><em>CSS-Code;</em>CSS-Code;
+                                    <br> }
+                                </p>
+                            </blockquote>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2 id="Navegadores y Media Query">Navegadores y Media Query</h2>
+                    <p>En la actualidad existen diferentes tipos de navegadores a travez de los cuales podemos navegar en internet. Sin embargo, no todos ellos o sus versiones han sido compatibles con media query. A continuación se muestra la compatibilidad entre navegadores y media query.</p>
+                    <div class="offset-3 col-sm-6 offset-3">
+                        <div class="table-responsive">
+                            <table class="table table-bordered table-dark table-condensed">
+                                <thead>
+                                    <tr>
+                                        <th>Navegador</th>
+                                        <th>@media</th>
+                                    </tr>
+                                </thead>
+                                <tbody></tbody>
+                                    <tr>
+                                        <td><amp-img id="Navegador" src="images/chrome.png" alt="chrome" width="50" height="50"></amp-img></td>
+                                        <td>21</td>
+                                    </tr>
+                                    <tr>
+                                        <td><amp-img id="Navegador" src="images/explorer.png" alt="explores" width="50" height="50"></amp-img></td>
+                                        <td>9</td>
+                                    </tr>
+                                    <tr>
+                                        <td><amp-img id="Navegador" src="images/fox.png" alt="firefox" width="50" height="50"></amp-img></td>
+                                        <td>3.5</td>
+                                    </tr> 
+                                    <tr>
+                                        <td><amp-img id="Navegador" src="images/opera.png" alt="opera" width="50" height="50"></amp-img></td>
+                                        <td>9</td>
+                                    </tr>  
+                                    <tr>
+                                        <td><amp-img id="Navegador" src="images/safari.png" alt="safari" width="50" height="50"></amp-img></td>
+                                        <td>4.0</td>
+                                    </tr>    
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2 id="Fucnionalidad de Media Query">Fucnionalidad de Media Query</h2>
+                    <p>La funcionalidad de los media querys van relacionados con expresiones tales como <strong><em>less than or equal to</em></strong>, <strong><em>greater or equal to</em></strong>, <strong><em>min</em></strong> o <strong><em>max</em></strong>.</p>
+                    <p>Veamos su funcionalidad con relación a los archivos html y CSS.</p>
+                    <div class="offset-1 col-sm-10">    
+                        <ul class="list-group">
+                            <li class="list-group-item">
+                                <p>Utilizando la etiqueta "link".</p>
+                                <p><code>&lt;link rel=&quot;stylesheet&quot; href=&quot;estilos-generales.css&quot;&gt;</code></p>
+                            </li>
+                            <li class="list-group-item">
+                                <p>Utilizando la etiqueta "link" agregando el atributo media.</p>
+                                <p><code>&lt;link rel=&quot;stylesheet&quot; href=&quot;estilo-imprimir.css&quot; media=&quot;print&quot;&gt;</code></p>
+                                <p>Print. Este atributo aplica sólo cuando se va a imprimir la página.</p>
+                            </li>
+                            <li class="list-group-item">
+                                <p>Utilizando media query en la hoja de estilos.</p>
+                                <p><code>
+                                    @media (min-width: 500px) {
+                                        <br>h1{
+                                                <br>margin: 1%;
+                                        <br>}
+                                        <br>.estiloresponsive{
+                                                <br>float: right;
+                                                <br>padding-left: 15px; 
+                                            <br>}
+                                        <br>}
+                                </code></p>
+                            </li>
+                            <li class="list-group-item">
+                                <p>Utilizando los operadores lógicos <strong>AND</strong>, <strong>OR</strong>, <strong>NOT</strong> y <strong>ONLY</strong>.</p>
+                                <p><code>
+                                    @media (max-width: 600px) and (orientation: landscape) {
+                                        <br>h1{
+                                                <br>color: red;
+                                            <br>}
+                                        <br>}
+                                    </code>
+                                </p>
+                                <p>
+                                    <ol>
+                                        <li>AND. Las dos condiciones deben de cumplirse.</li>
+                                        <li>OR. Se cumple cualquiera de las condiciones.</li>
+                                        <li>NOT. Cuando no se cumple la condicion se aplica el meida query.</li>
+                                        <li>ONLY. Sólo aplica en caso que se cumplan ciertas condiciones.</li>
+                                    </ol> 
+                                </p>
+                            </li>
+                         </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2 id="Semantica web">Semantica web</h2>
+                    <p>"La semántica web es un conjunto de actividades desarrolladas en el seno de World Wide Web Consortium con tendencia a la creación de tecnologías para publicar datos legibles por aplicaciones informáticas.​ Se basa en la idea de añadir metadatos semánticos y ontológicos a la World Wide Web. En el transcurso del tiempo la semantica ha evolucionado hasta llegar a la web 3.0 que son los metalenguajes y los estándares de representación."</p>
+                    <p>La búsqueda que realizan los usuario se desarrolla no centrándose únicamente en los parámetros buscados, sino en la semántica o significado de los mismos.</p>
+                    <h3>Ventajas</h3>
+                        <ul>
+                            <li>Incorpora contenido semántico a las páginas que se suben a Internet. Esto permite una mejor organización de la información, asegurando búsquedas más precisas por significado y no por contenido textual.</li>
+                            <li>Permite a las computadoras la gestión de conocimiento, hasta el momento reservada a las personas (hace uso de inteligencia artificial).</li>
+                        </ul>
+                    <h3>Desventajas</h3>
+                    <ul>
+                        <li>Es necesario unificar los estándares semánticos y proveer relaciones de equivalencia entre conceptos.</li>
+                        <li></li>Es costoso y laborioso adaptar los documentos de Internet, para poder ser procesados de forma semántica (a esto hay que sumar los problemas del idioma).
+                    </ul>
+
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2 id="Colores web">Colores web</h2>
+                    <p>Los colores en HTML son una parte fundamental para su desarrollo ya que con ellos podemos cambiar de tonalidades los textos, enlace y fondos. Contamos con tres tipos de códigos para los colores:</p>
+                    <ol>
+                        <li>HEX. Utiliza tres bytes números hexadecimal (seis dígitos) cada byte  representa la intensidad de rojo, verde y azul en el color.</li>
+                        <li>RGB. Utiliza la combinación de tres colores primarios que son el rojo, verde y azul, utilizan una escala del 0 al 255, ejemplificado de esta forma (0, 0, 0).</li>
+                        <li>HSL. Utiliza la hsl() prefijo y tres valores de tono (escala de 0 a 360), saturación (porcentaje entre el 0% y el 100%) y luminosidad (porcentaje entre el 0% y el 100%).</li>
+                    </ol>
+                    <div class="offset-3 col-sm-6 offset-3  ">
+                        <div class="table-responsive">
+                            <table class="table table-bordered table-dark">
+                                <thead>
+                                    <th colspan="4">Color para Texto</th>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Color / Código</td>
+                                        <td>HEX</td>
+                                        <td>RGB</td>
+                                        <td>HSL</td>
+                                    </tr>
+                                    <tr>
+                                        <td>RED</td>
+                                        <td>#FF0000</td>
+                                        <td>RGB(255, 0, 0)</td>
+                                        <td>0, 100%, 50%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>PINK</td>
+                                        <td>#FFC0CB</td>
+                                        <td>RGB(255, 192, 203)</td>
+                                        <td>342, 100%, 90%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>YELLOW</td>
+                                        <td>#FFFF00</td>
+                                        <td>RGB(255, 255, 0)</td>
+                                        <td>60, 100%, 50%</td>
+                                    </tr>
+                                        
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="offset-3 col-sm-6 offset-3  ">
+                        <div class="table-responsive">
+                            <table class="table table-bordered table-dark">
+                                <thead>
+                                    <th colspan="3">Color para Enlace</th>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Tipo</td>
+                                        <td>Descripción</td>
+                                        <td>Ejemplo</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>&lt;a&gt;</code></td>
+                                        <td>Utiliza la etiqueta <code>&lt;a&gt;</code> y se comportan como un texto normal.</td>
+                                        <td>
+                                            <code class="html">
+                                                <br> &lt;head&gt;
+                                                <br>    &lt;style&gt;
+                                                <br>        a { color: #FF0000; } /* CSS link color */
+                                                <br>    &lt;/style&gt;
+                                                <br> &lt;/head&gt;
+                                                <br> &lt;body&gt;
+                                                <br>    &lt;a href="http://example.com/"&gt;A Red Link&lt;/a&gt;
+                                                <br>&lt;/body&gt;
+                                            </code>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>#</td>
+                                        <td>Utiliza IDs con el prefijo un signo '#' en CSSy solo son usados una vez.</td>
+                                        <td>
+                                            <code>
+                                                &lt;head&gt;
+                                                <br> &lt;style&gt;
+                                                <br>          #link { color: #FF0000; } /* CSS link color */
+                                                <br>        &lt;/style&gt;
+                                                <br>      &lt;/head&gt;
+                                                <br>      &lt;body&gt;
+                                                <br>        &lt;a id="link" href="http://example.com/"&gt;A Red Link&lt;/a&gt;
+                                                <br>      &lt;/body&gt;</code>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>.</td>
+                                        <td>Utliza clases CSS precedidas de un '.'</td>
+                                        <td>
+                                            <code>
+                                                <br> &lt;head&gt;
+                                                <br> &lt;style&gt;
+                                                <br> .link { color: #FF0000; } /* CSS link color */
+                                                <br>        &lt;/style&gt;
+                                                <br>      &lt;/head&gt;
+                                                <br>      &lt;body&gt;
+                                                <br>        &lt;a class="link" href="http://example.com/one"&gt;A Red Link&lt;/a&gt;
+                                                <br>        &lt;a class="link" href="http://example.com/two"&gt;Another Red Link&lt;/a&gt;
+                                                <br>      &lt;/body&gt;
+                                            </code>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="offset-3 col-sm-6 offset-3  ">
+                        <div class="table-responsive">
+                            <table class="table table-bordered table-dark">
+                                <thead>
+                                    <th colspan="3">Color para Fondos</th>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Tipo</td>
+                                        <td>Descripción</td>
+                                        <td>Ejemplo</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>&lt;body&gt;</code></td>
+                                        <td>Utiliza la etiqueta <code>&lt;body&gt;</code> y se considera el ancho y el alto de un elemento, más algo de relleno y de las fronteras (pero no los márgenes).</td>
+                                        <td>
+                                            <code class="html">
+                                                <br> &lt;head&gt;
+                                                <br>    &lt;style&gt;
+                                                <br>        body { background-color: #FF0000; }
+                                                <br>    &lt;/style&gt;
+                                                <br> &lt;/head&gt;
+                                                <br> &lt;body&gt;
+                                                <br>&lt;/body&gt;
+                                            </code>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>&lt;div&gt;</td>
+                                        <td>Utiliza la etiqueta <code>&lt;div&gt;</code> para darle una altura y un ancho fijo.</td>
+                                        <td>
+                                            <code>
+                                                &lt;head&gt;
+                                                <br> &lt;style&gt;
+                                                <br>    div{
+                                                <br>          width: 50%;
+                                                <br>          height: 200px;
+                                                <br>          background-color: #00FF00;
+                                                <br>    }
+                                                <br>        &lt;/style&gt;
+                                                <br>      &lt;/head&gt;
+                                                <br>      &lt;body&gt;
+                                                <br>        &lt;a id="link" href="http://example.com/"&gt;A Red Link&lt;/a&gt;
+                                                <br>      &lt;/body&gt;</code>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>.</td>
+                                        <td>Utliza clases CSS precedidas de un '.'</td>
+                                        <td>
+                                            <code>
+                                                <br> &lt;head&gt;
+                                                <br> &lt;style&gt;
+                                                <br> .link { color: #FF0000; } /* CSS link color */
+                                                <br>        &lt;/style&gt;
+                                                <br>      &lt;/head&gt;
+                                                <br>      &lt;body&gt;
+                                                <br>        &lt;a class="link" href="http://example.com/one"&gt;A Red Link&lt;/a&gt;
+                                                <br>        &lt;a class="link" href="http://example.com/two"&gt;Another Red Link&lt;/a&gt;
+                                                <br>      &lt;/body&gt;
+                                            </code>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2 id="REM y EM">REM y EM</h2>
+                    <p>Las unidades de media <strong>EM</strong> y <stron>REM</stron> son traducidos por los navegadores en pixeles. Esta establecido que 16 pixeles son iguales a 1 em o 1 rem (16px = 1em o 16px = 1rem). Em o REM son unidades flexibles y escalables para los diseños de las páginas webs permitiendo que sean responsivas para diferentes dispositivos de consulta.</p>
+                    <div class="offset-1 col-sm-10">    
+                        <ul class="list-group">
+                            <li class="list-group-item">
+                                <h3>REM</h3>
+                                <p>Esta unidad depende directamente de la raiz de la página, es decir, permite escalar con solo cambiar el elemento raiz html.</p>
+                                <p><code>
+                                    html {
+                                        <br>font-size: 16px;
+                                    <br>}
+                                    <br>h1{
+                                        <br>font-size: 2rem; /* 2 × 16px = 32px */
+                                        <br>margin-top: 1.25rem; /* 1.25rem = 20px, ya que 1.25 × 16 = 20 */
+                                        <br>margin-bottom: 1.25rem;
+                                    <br>}
+                                </code></p>
+                            </li>
+                            <li class="list-group-item">
+                                <h3>EM</h3>
+                                <p>Esta unidad depende del último font-size definido dentro del árbol de elementos en el que se encuentra. </p>
+                                <p><em>CSS</em></p>
+                                <p><code>
+                                    html {
+                                        <br>font-size: 100%; /* 100% = 16px */
+                                    <br>}
+                                    <br>.container{
+                                            <br>font-size: 1.25em;
+                                    <br>}
+                                    <br>.small-font{
+                                            <br>font-size: 0.9em;
+                                    <br>}
+                                </code></p>
+                                <p><em>HTML</em></p>
+                                <p><code>
+                                    &lt;div class="container"&gt;
+                                        <br>&lt;p&gt;Titulo&lt;/p&gt;
+                                        <br>&lt;p class="small-font"&gt;Texto dentro del contenedor&lt;/p&gt;
+                                    <br>&lt;/div&gt;
+                                    <br>&lt;hr&gt;
+                                    <br>&lt;p class="small-font"&gt;Texto fuera del contenedor &lt;/p&gt;
+                                </code></p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2 id="AMP">AMP</h2>
+                    <div class="offset-3 col-sm-6">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/5Yjoe54vzwE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <amp-youtube data-videoid="5Yjoe54vzwE" layout="responsive" width="560" height="315"></amp-youtube>
+                    </div>
+                    <p>AMP es una biblioteca de código abierto que ofrece una forma directa de crear páginas web atractivas, ligeras y que se cargan prácticamente al instante para los usuarios.</p>
+                    
+                    <p>Las páginas AMP se crean con tres componentes básicos:</p>
+                    <div class="offset-1 col-sm-10">
+                        <ul class="list-group">
+                            <li class="list-group-item">
+                                <h3>AMP HTML</h3>
+                                <p>AMP HTML es, básicamente, código HTML extendido con propiedades AMP personalizadas.</p>
+                                <p>
+                                    <code>
+                                        <br>    &lt;!doctype html&gt;
+                                        <br>    &lt;html ⚡&gt;
+                                        <br>    &lt;head&gt;
+                                        <br>    &lt;meta charset="utf-8"&gt;
+                                        <br>    &lt;link rel="canonical" href="hello-world.html"&gt;
+                                        <br>    &lt;meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1"&gt;
+                                        <br>    &lt;style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}&lt;/style&gt;&lt;noscript&gt;&lt;style amp-boilerplate&gt;body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}&lt;/style&gt;&lt;/noscript&gt;
+                                        <br>    &lt;script async src="https://cdn.ampproject.org/v0.js"&gt;&lt;/script&gt;
+                                        <br>    &lt;/head&gt;
+                                        <br>    &lt;body&gt;Hello World!&lt;/body&gt;
+                                        <br>    &lt;/html&gt;
+                                    </code>
+                                </p>
+                            </li>
+                            <li class="list-group-item">
+                                <h3>JavaScript de AMP</h3>
+                                <p>La biblioteca JavaScript de AMP gestiona la carga de recursos todo para que las páginas se rendericen rápidamente.</p>
+                            </li>
+                            <li class="list-group-item">
+                                <h3>Caché de AMP</h3>
+                                <p>La caché de AMP de Google es una red de distribución de contenido basada en proxies con la que se entregan documentos AMP válidos. Cuando se utiliza la caché de AMP de Google, se cargan el documento, todos los archivos JavaScript y todas las imágenes del mismo origen que esté utilizando HTTP 2.0 para maximizar la eficiencia.</p>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                </div>
+            </div>  
+            
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2 id="Referencias">Referencias</h2>
+                    <p>A continuación se enlistan las referencias de este ensayo.</p>
+                    <blockquote>
+                        <ol>
+                            <li>https://developer.mozilla.org/es/docs/CSS/Media_queries</li>
+                            <li>https://www.w3schools.com/cssref/css3_pr_mediaquery.asp</li>
+                            <li>https://htmlcolorcodes.com/es/</li>
+                            <li>https://www.ampproject.org/es/learn/overview/</li>
+                            <li>https://es.wikipedia.org/wiki/Web_sem%C3%A1ntica#Componentes_de_la_Web_Sem%C3%A1ntica</li>
+                        </ol>
+                    </blockquote>
+                    
+                </div>
+            </div>  
+            
+        </div>
+        
+       
+    </body>
+</html>

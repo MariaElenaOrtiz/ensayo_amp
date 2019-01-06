@@ -1,0 +1,19 @@
+body{
+    background-color: lightslategrey;
+}
+
+h1{
+    color: rgb(252, 249, 249);
+}
+
+h2{
+    color: rgb(66, 65, 65);
+}
+
+nav{
+    background-color: #e3f2fd;
+}
+
+blockquote{
+    background-color: #5df0f0;
+}
